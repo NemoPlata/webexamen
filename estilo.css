@@ -1,0 +1,14 @@
+body {
+  background-color: #066083;
+}
+h1 {
+  color: #000000;
+}
+
+table{
+    border: black 2px solid;
+    background-color: #96B9C7;
+    list-style: none;
+    font-style: none;
+}
+

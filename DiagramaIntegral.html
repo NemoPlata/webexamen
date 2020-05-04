@@ -1,0 +1,207 @@
+<html>
+  <head>
+    <title>Diagrama Integral</title>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <br><br><br>
+      <h1>Diagrama Integral</h1>
+      <div id="container" style="width: 80%; height: 80%"></div>
+      <script>
+          anychart.onDocumentReady(function() {
+            var data1 = [
+          ["1", 7.2],
+          ["2", 15.7],
+          ["3", 25.5],
+          ["4", 32],
+          ["5", 39.5],
+          ["6", 49.6],
+          ["7", 60.6],
+          ["8", 71.6],
+          ["9", 82.7],
+          ["10", 93.9],
+          ["11", 105.2],
+          ["12", 116.6],
+          ["13", 128],
+          ["14", 139.7],
+          ["15", 151.7],
+          ["16", 164.6],
+          ["17", 177.5],
+          ["18", 187.8],
+          ["19", 197.5],
+          ["20", 208.3],
+          ["21", 219.3],
+          ["22", 229.5],
+          ["23", 240],
+          ["24", 246.5],
+          ["25", 252.8],
+          ["26", 260.1],
+          ["27", 267.6],
+          ["28", 275.5],
+          ["29", 283.7]
+        ];
+        var data2 = [
+          ["1", 50],
+          ["2", 116],
+          ["3", 189],
+          ["4", 261],
+          ["5", 342],
+          ["6", 415],
+          ["7", 481],
+          ["8", 556],
+          ["9", 626],
+          ["10", 701],
+          ["11", 770],
+          ["12", 846],
+          ["13", 922],
+          ["14", 991],
+          ["15", 1066],
+          ["16", 1130],
+          ["17", 1185],
+          ["18", 1261],
+          ["19", 1332],
+          ["20", 1396],
+          ["21", 1474],
+          ["22", 1544],
+          ["23", 1618],
+          ["24", 1690],
+          ["25", 1767],
+          ["26", 1818],
+          ["27", 1880],
+          ["28", 1940],
+          ["29", 2010]
+        ];
+        var data3 = [
+          ["1", 10.3],
+          ["2", 20.6],
+          ["3", 30.8],
+          ["4", 47.2],
+          ["5", 66],
+          ["6", 85.7],
+          ["7", 101.3],
+          ["8", 122.5],
+          ["9", 145.1],
+          ["10", 165],
+          ["11", 189.2],
+          ["12", 210.2],
+          ["13", 231.6],
+          ["14", 252.9],
+          ["15", 275.1],
+          ["16", 275.1],
+          ["17", 308.9],
+          ["18", 336.3],
+          ["19", 362],
+          ["20", 386.9],
+          ["21", 410],
+          ["22", 441.7],
+          ["23", 441.7],
+          ["24", 478],
+          ["25", 516.3],
+          ["26", 558.9],
+          ["27", 614.3],
+          ["28", 672.6],
+          ["29", 672.6]
+        ];
+        var data4 = [
+          ["1", 1],
+          ["2", 2],
+          ["3", 3],
+          ["4", 4],
+          ["5", 5],
+          ["6", 6],
+          ["7", 7],
+          ["8", 8],
+          ["9", 9],
+          ["10", 9],
+          ["11", 10],
+          ["12", 11],
+          ["13", 12],
+          ["14", 13],
+          ["15", 14],
+          ["16", 15],
+          ["17", 16],
+          ["18", 17],
+          ["19", 18],
+          ["20", 19],
+          ["21", 20],
+          ["22", 21],
+          ["23", 22],
+          ["24", 23],
+          ["25", 24],
+          ["26", 25],
+          ["27", 26],
+          ["28", 27],
+          ["29", 28]
+        ];
+        // create a chart
+        chart = anychart.area();
+
+
+        // create an area series and set the data
+        var seriesData_1 = chart.area(data1);
+        var seriesData_2 = chart.area(data2);
+        var seriesData_3 = chart.area(data3);
+        var seriesData_4 = chart.area(data4);
+        // set the container id
+        chart.container("container");
+
+            // create the first series
+        var series1 = chart.area(seriesData_1);
+
+
+        series1.normal().fill("#00cc99", 0.3);
+        series1.hovered().fill("#00cc99", 0.1);
+        series1.selected().fill("#00cc99", 0.5);
+        series1.normal().stroke("#00cc99", 1, "10 5", "round");
+        series1.hovered().stroke("#00cc99", 2, "10 5", "round");
+        series1.selected().stroke("#00cc99", 4, "10 5", "round");
+
+        // create the second series
+        var series2 = chart.area(seriesData_2);
+
+        series2.normal().fill("#0066cc", 0.3);
+        series2.hovered().fill("#0066cc", 0.1);
+        series2.selected().fill("#0066cc", 0.5);
+        series2.normal().hatchFill("forward-diagonal", "#0066cc", 1, 15);
+        series2.hovered().hatchFill("forward-diagonal", "#0066cc", 1, 15);
+        series2.selected().hatchFill("forward-diagonal", "#0066cc", 1, 15);
+        series2.normal().stroke("#0066cc");
+        series2.hovered().stroke("#0066cc", 2);
+        series2.selected().stroke("#0066cc", 4);
+
+
+        // create the third series
+        var series3 = chart.area(seriesData_3);
+
+        series3.normal().fill("#3343FF", 0.3);
+        series3.hovered().fill("#3343FF", 0.1);
+        series3.selected().fill("#3343FF", 0.5);
+        series3.normal().hatchFill("forward-diagonal", "#3343FF", 1, 15);
+        series3.hovered().hatchFill("forward-diagonal", "#3343FF", 1, 15);
+        series3.selected().hatchFill("forward-diagonal", "#3343FF", 1, 15);
+        series3.normal().stroke("#3343FF");
+        series3.hovered().stroke("#3343FF", 2);
+        series3.selected().stroke("#3343FF", 4);
+
+        //create the quarter series
+        var series4 = chart.area(seriesData_4);
+
+        series4.normal().fill("#A533FF", 0.3);
+        series4.hovered().fill("#A533FF", 0.1);
+        series4.selected().fill("#A533FF", 0.5);
+        series4.normal().hatchFill("forward-diagonal", "#A533FF", 1, 15);
+        series4.hovered().hatchFill("forward-diagonal", "#A533FF", 1, 15);
+        series4.selected().hatchFill("forward-diagonal", "#A533FF", 1, 15);
+        series4.normal().stroke("#A533FF");
+        series4.hovered().stroke("#A533FF", 2);
+        series4.selected().stroke("#A533FF", 4);
+
+        // initiate drawing the chart
+        chart.draw();
+        });
+        </script>
+      </div>
+    </center>
+  </body>
+</html>

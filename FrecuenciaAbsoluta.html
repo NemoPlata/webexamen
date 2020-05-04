@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Grafico de Barras</title>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+  </head>
+  <body>
+    <center>
+      <br><br><br>
+      <h1>Frecuencias Absolutas</h1>
+      <div id="container" style="width: 80%; height: 80%"></div>
+        <script>
+          anychart.onDocumentReady(function() {
+          // create data
+          var data = [
+            ["Peso", 281.4],
+            ["Altura", 2005],
+            ["Velocidad", 672.6],
+            ["Color", 29]
+          ];
+
+          // create a chart
+          chart = anychart.column();
+
+          // create a column series and set the data
+          var series = chart.column(data);
+
+          series.normal().fill("#4825B5", 0.3);
+          // set the container id
+          chart.container("container");
+
+          // initiate drawing the chart
+          chart.draw();
+          });
+        </script>
+      <div>
+    </center>
+  </body>
+</html>

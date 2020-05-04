@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>JavaScript Pie Chart</title>
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+      <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+  </head>
+  <body>
+    <div id="container" style="width: 100%; height: 100%"></div>
+    <script>
+    anychart.onDocumentReady(function() {
+    var data = [
+  {x: "Peso", value: 283.7},
+  {x: "Altura", value: 2010},
+  {x: "Velocidad", value: 672.6},
+  {x: "Color", value: 28},
+];
+// create the chart
+    var chart = anychart.pie();
+
+// set the chart title
+    chart.title("Frecuencias Relativas");
+
+// add the data
+    chart.data(data);
+
+// display the chart in the container
+    chart.container('container');
+    chart.draw();
+    });
+    </script>
+  </head>
+  <body>
+    <div id="container" style="width: 100%; height: 100%"></div>
+  </body>
+</html>
